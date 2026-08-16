@@ -12,4 +12,4 @@ Travis Park is a palaeobiologist fascinated by phenotypic evolution, phylogeny, 
 
 Website: [https://www.travisparkpalaeo.com/](https://www.travisparkpalaeo.com/)
 
-![](travis-park.jpg){fig-align="center"}
+![](travis-park.jpg){fig-align="center" width="50%"}

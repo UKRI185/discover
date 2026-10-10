@@ -3,7 +3,7 @@ project:
   output-dir: docs
   resources:
     - images/
-  pre-render: Rscript generate_events.R
+  pre-render: Rscript R/generate_events.R
 
 website:
   title: "Ancient Oceans"

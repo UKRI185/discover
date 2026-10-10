@@ -20,9 +20,19 @@ events$image[events$image != ""] <- paste0("images/", events$image[events$image!
 # Set contributor
 events$body<- paste0(events$body, "<br><br>", "Contributed by: ", events$contributor)
 # Set licensing
-events$license <- gsub(pattern = "CC BY-SA 4.0", 
-                       replacement = "<a href='https://creativecommons.org/licenses/by-sa/4.0/deed.en'>CC BY-SA 4.0</a>",
+events$license <- gsub(pattern = "CC BY 4.0", 
+                       replacement = "<a href='https://creativecommons.org/licenses/by/4.0/deed.en' target='_blank'>CC BY 4.0</a>",
                        x = events$license)
+events$license <- gsub(pattern = "CC BY-SA 4.0", 
+                       replacement = "<a href='https://creativecommons.org/licenses/by-sa/4.0/deed.en' target='_blank'>CC BY-SA 4.0</a>",
+                       x = events$license)
+events$license <- gsub(pattern = "CC BY 3.0", 
+                       replacement = "<a href='https://creativecommons.org/licenses/by/3.0/deed.en' target='_blank'>CC BY 3.0</a>",
+                       x = events$license)
+events$license <- gsub(pattern = "CC0 1.0", 
+                       replacement = "<a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0 1.0</a>",
+                       x = events$license)
+
 events$caption <- paste0(events$caption, " License: ", events$license)
 # Escape helpers --------------------------------------------------------
 js_str <- function(x) {
@@ -93,7 +103,7 @@ for (i in seq_len(n)) {
     sprintf('eon: "%s",',   js_str(e$eon)),
     sprintf('era: "%s",',   js_str(e$era)),
     sprintf('per: "%s",',   js_str(e$period)),
-    sprintf('color: "%s"',  js_str(e$color)),
+    sprintf('colour: "%s"',  js_str(e$colour)),
     paste0("  }", comma)
   )
 }

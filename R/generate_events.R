@@ -8,6 +8,7 @@
 # This script is used to automatically generate js/events.js from
 # events.csv. Run from the project root:  Rscript generate_events.R
 # -----------------------------------------------------------------------
+library(jsonlite)
 
 # Settings --------------------------------------------------------------
 required <- c("mya", "title", "image", "caption", "license", "body",
@@ -97,7 +98,7 @@ out <- data.frame(
   stringsAsFactors = FALSE
 )
 # jsonlite handles all string escaping; digits = NA keeps full precision
-json <- jsonlite::toJSON(out, auto_unbox = TRUE, pretty = TRUE, digits = NA)
+json <- toJSON(out, auto_unbox = TRUE, pretty = TRUE, digits = NA)
 
 dir.create("js", showWarnings = FALSE)
 con <- file(file.path("js", "events.js"), open = "w", encoding = "UTF-8")

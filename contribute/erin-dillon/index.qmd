@@ -1,7 +1,7 @@
 ---
 title: "Erin Dillon"
 description: "Conservation Palaeobiologist"
-image: "erin-dillon.jpg"
+image: "erin-dillon.webp"
 categories: [Erin Dillon]
 page-layout: article
 ---

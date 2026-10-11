@@ -59,7 +59,7 @@ body {
   text-transform: uppercase; animation: fu 1s 0.9s both; margin-bottom: 1rem;
 }
 .hcontributors {
-  font-size: 0.62rem; color: var(--muted); letter-spacing: 0.12em;
+  font-size: 0.62rem; color: var(--muted) !important; letter-spacing: 0.12em;
   text-transform: uppercase; animation: fu 1s 0.9s both; margin-bottom: 1.25rem;
 }
 /* scue: fixed to viewport bottom, centred on full viewport (no sidebar during hero) */
